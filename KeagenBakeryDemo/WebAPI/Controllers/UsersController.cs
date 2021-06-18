@@ -11,48 +11,48 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class EmployeesController : ControllerBase
+    public class UsersController : ControllerBase
     {
-        private readonly EmployeeContext _context;
+        private readonly UserContext _context;
 
-        public EmployeesController(EmployeeContext context)
+        public UsersController(UserContext context)
         {
             _context = context;
         }
 
-        // GET: api/Employees
+        // GET: api/Users
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Employee>>> GetEmployees()
+        public async Task<ActionResult<IEnumerable<User>>> Getusers()
         {
-            return await _context.Employees.ToListAsync();
+            return await _context.users.ToListAsync();
         }
 
-        // GET: api/Employees/5
+        // GET: api/Users/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Employee>> GetEmployee(int id)
+        public async Task<ActionResult<User>> GetUser(int id)
         {
-            var employee = await _context.Employees.FindAsync(id);
+            var user = await _context.users.FindAsync(id);
 
-            if (employee == null)
+            if (user == null)
             {
                 return NotFound();
             }
 
-            return employee;
+            return user;
         }
 
-        // PUT: api/Employees/5
+        // PUT: api/Users/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutEmployee(int id, Employee employee)
+        public async Task<IActionResult> PutUser(int id, User user)
         {
-            if (id != employee.Id)
+            if (id != user.UserId)
             {
                 return BadRequest();
             }
 
-            _context.Entry(employee).State = EntityState.Modified;
+            _context.Entry(user).State = EntityState.Modified;
 
             try
             {
@@ -60,7 +60,7 @@ namespace WebAPI.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!EmployeeExists(id))
+                if (!UserExists(id))
                 {
                     return NotFound();
                 }
@@ -73,38 +73,37 @@ namespace WebAPI.Controllers
             return NoContent();
         }
 
-        // POST: api/Employees
+        // POST: api/Users
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<Employee>> PostEmployee(Employee employee)
+        public async Task<ActionResult<User>> PostUser(User user)
         {
-            _context.Employees.Add(employee);
+            _context.users.Add(user);
             await _context.SaveChangesAsync();
 
-            //return CreatedAtAction("GetEmployee", new { id = employee.Id }, employee);
-            return CreatedAtAction(nameof(GetEmployee), new { id = employee.Id }, employee);
+            return CreatedAtAction(nameof(GetUser), new { id = user.UserId }, user);
         }
 
-        // DELETE: api/Employees/5
+        // DELETE: api/Users/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Employee>> DeleteEmployee(int id)
+        public async Task<ActionResult<User>> DeleteUser(int id)
         {
-            var employee = await _context.Employees.FindAsync(id);
-            if (employee == null)
+            var user = await _context.users.FindAsync(id);
+            if (user == null)
             {
                 return NotFound();
             }
 
-            _context.Employees.Remove(employee);
+            _context.users.Remove(user);
             await _context.SaveChangesAsync();
 
-            return employee;
+            return user;
         }
 
-        private bool EmployeeExists(long id)
+        private bool UserExists(int id)
         {
-            return _context.Employees.Any(e => e.Id == id);
+            return _context.users.Any(e => e.UserId == id);
         }
     }
 }
