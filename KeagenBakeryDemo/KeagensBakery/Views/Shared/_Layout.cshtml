@@ -1,0 +1,25 @@
+﻿<!DocType html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="~/css/StyleSheet.css" />
+    <title>@ViewData["Title"] - KeagensBakery</title>
+</head>
+<body>
+    <header>
+        <img class="LogoImg" src="~/images/KeagensLogo (2).png" />
+        <div class="Container">
+            <ul class="Navbar">
+                <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a>Shop</a></li>
+                <li><a>Sign In</a></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+            </ul>
+        </div>
+    </header>
+    @RenderBody()
+    <p>Hello World from the Layout you see</p>
+
+</body>
+</html>
