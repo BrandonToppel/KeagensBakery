@@ -1,25 +1,26 @@
 ﻿body {
-   /* background-color: #33cccc;*/
-   background-color: white;
+    /* background-color: #33cccc;*/
+    background-color: white;
 }
 h1 {
-    padding: 20px;
+    padding: 50px;
 }
+/*Centers logo */
 .LogoImg {
-    /*Centers logo */
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 35%;
 }
+/*Navigation bar styles*/
 .Navbar, ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    position: absolute;
     width: 100%;
     background-color: #dddddd;
-    overflow: hidden;
-    position: fixed;
+    overflow: visible;
 }
 .Navbar, li {
     display: inline;
@@ -27,11 +28,122 @@ h1 {
 .Navbar, li, a {
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 8px 8px;
     text-decoration: none;
 }
 .Navbar a:hover {
     background-color: #111;
+}
+li a:hover, .dropdown:hover .DropBtn {
+    background-color:black;
+}
+li.dropdown {
+    display: inline-block;
+}
+li a, .DropBtn {
+    display:inline-block;
+    color: white;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+.DropdownContext {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.DropdownContext a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.DropdownContext a:hover {
+    background-color: #f1f1f1;
+}
+.dropdown:hover .DropdownContext {
+    display: block;
+}
+
+/*Footer styles*/
+footer {
+    border-top-style : solid;
+    border-bottom-style: solid;
+    border-color: black;
+    width: 100%;
+}
+
+/*Homepage slideshow styles*/
+.Slideshow-Container {
+    max-width: 1000px;
+    position:relative;
+    margin:auto;
+}
+.BakerySlides {
+    display:none;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+    background-color:red;
+}
+.SlideCaptions {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
 

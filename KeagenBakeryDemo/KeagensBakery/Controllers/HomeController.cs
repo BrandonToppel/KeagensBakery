@@ -17,5 +17,15 @@ namespace KeagensBakery.Controllers
         {
             return View();
         }
+
+        public IActionResult Bakery()
+        {
+            return View();
+        }
+        
+        public IActionResult SignIn()
+        {
+            return View();
+        }
     }
 }
