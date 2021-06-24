@@ -2,8 +2,18 @@
     /* background-color: #33cccc;*/
     background-color: white;
 }
-h1 {
+/*h1 {
     padding: 50px;
+}*/
+
+h2, #HomepageHeading {
+    margin-top: 75px;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #33cccc;
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight:bold;
 }
 /*Centers logo */
 .LogoImg {
@@ -16,26 +26,28 @@ h1 {
 .Navbar, ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 10px;
     position: absolute;
     width: 100%;
-    background-color: #dddddd;
+    background-color: #ffccff;
     overflow: visible;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
 }
 .Navbar, li {
     display: inline;
 }
-.Navbar, li, a {
-    color: white;
-    text-align: center;
+.Navbar li a {
+    color: #33cccc;
     padding: 8px 8px;
     text-decoration: none;
 }
 .Navbar a:hover {
-    background-color: #111;
+    background-color: white;
 }
 li a:hover, .dropdown:hover .DropBtn {
-    background-color:black;
+    background-color:white;
 }
 li.dropdown {
     display: inline-block;
@@ -78,7 +90,11 @@ footer {
     border-color: black;
     width: 100%;
 }
-
+/*homepage images*/
+#frontpageCookies, #frontpageCase {
+    border:solid;
+    border-color: black;
+}
 /*Homepage slideshow styles*/
 .Slideshow-Container {
     max-width: 1000px;
@@ -111,13 +127,13 @@ footer {
     background-color:red;
 }
 .SlideCaptions {
-    color: #f2f2f2;
+    color: #33cccc;
     font-size: 15px;
-    padding: 8px 12px;
     position: absolute;
     bottom: 8px;
     width: 100%;
     text-align: center;
+    text-decoration:underline;
 }
 
 .fade {

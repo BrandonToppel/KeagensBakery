@@ -2,17 +2,16 @@
 @{
     ViewData["Title"] = "Index";
 }
-
-<h1>Index</h1>
+<h2 id="HomepageHeading">Welcome to Keagen's Bakery, please take a look at our delicious new items.</h2>
 <!--Container for the slide show-->
 <div class="Slideshow-Container">
     <!--The Images of current baked goods-->
     <div class="BakerySlides fade">
-       <img src="~/images/Cookies.jpg" />
+       <a asp-controller="Home" asp-action="Bakery" target="#BakeryCookies"><img src="~/images/ChocolateChipCookies.png" id="frontpageCookies" /></a>
         <p class="SlideCaptions">Chocloate Chip heaven</p>
     </div>
     <div class="BakerySlides fade">
-        <img src="~/images/Bakeyimages.jpg" />
+        <img src="~/images/Macaron.png" id="frontpageCase" />
         <p class="SlideCaptions">Baked goods made daily</p>
     </div>
 
