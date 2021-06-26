@@ -7,13 +7,14 @@
 }*/
 
 h2, #HomepageHeading {
-    margin-top: 75px;
+     margin-top: 75px;
     margin-bottom: 25px;
     text-align: center;
     color: #33cccc;
     font-size: 50px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight:bold;
+    font-family: 'Lobster', cursive;
+    font-weight:bolder;
+    text-shadow: 7px;
 }
 /*Centers logo */
 .LogoImg {
@@ -42,6 +43,7 @@ h2, #HomepageHeading {
     color: #33cccc;
     padding: 8px 8px;
     text-decoration: none;
+    font-family: 'Lobster'
 }
 .Navbar a:hover {
     background-color: white;
@@ -128,12 +130,17 @@ footer {
 }
 .SlideCaptions {
     color: #33cccc;
-    font-size: 15px;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: 'Lobster';
     position: absolute;
-    bottom: 8px;
+    bottom: 0;
     width: 100%;
     text-align: center;
     text-decoration:underline;
+}
+.BakerySlides {
+    padding-bottom: 40px;
 }
 
 .fade {
