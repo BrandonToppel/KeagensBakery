@@ -168,5 +168,16 @@ footer {
         opacity: 1
     }
 }
+/*Bakery page styles*/
+.ProductImages {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+/*Product pages styles*/
+.BrownieChocChipCookie {
+    max-height: 250px;
+    max-width: 250px;
+}
 
 

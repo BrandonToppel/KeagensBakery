@@ -5,7 +5,20 @@
 
 <h1>Bakery</h1>
 
-<h3 id="BakeryCookies">Cookies</h3>
+<h2 id="BakeryCookies">Cookies</h2>
+<div class="CookieOptions">
+    <a asp-controller="Product" asp-action="BrownieChocolateChipCookie"><img class="ProductImages" src="~/images/Broo.jpg" /></a>
+    <h3>Chocolate Chip Brownie Cookie</h3>
+    <div class="dropdown">
+        <button class="DropBtn">Cookie Sizes</button>
+        <div class="DropdownContext">
+            <a>Single Cookie $1.29</a>
+            <a>Half Dozen Package (6 Cookies) $5.99</a>
+            <a>Dozen Package (12 Cookies) $11.99</a>
+        </div>
+    </div>
+    <button class="Add_Cart_Btn">Add to Cart</button>
+</div>
 
 <h3>Cakes</h3>
 
