@@ -175,9 +175,16 @@ footer {
 }
 
 /*Product pages styles*/
-.BrownieChocChipCookie {
-    max-height: 250px;
-    max-width: 250px;
+.BrownieChocChipCookie img {
+    max-height: 500px;
+    max-width: 500px;
 }
+.BrownieChocChipCookie {
+    margin-left: 800px;
+}
+#SingleCookie {
+    display:none;
+}
+
 
 
