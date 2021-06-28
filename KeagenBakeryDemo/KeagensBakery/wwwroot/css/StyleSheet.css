@@ -170,8 +170,8 @@ footer {
 }
 /*Bakery page styles*/
 .ProductImages {
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 200px;
+    max-height: 200px;
 }
 
 /*Product pages styles*/
@@ -184,6 +184,11 @@ footer {
 }
 #SingleCookie {
     display:none;
+}
+/*Oreo Macaron Product page Styles*/
+.OreoMacaronPic {
+    max-height: 300px;
+    max-width: 300px;
 }
 
 

@@ -12,5 +12,10 @@ namespace KeagensBakery.Controllers
         {
             return View();
         }
+        //Macaron Section
+        public IActionResult OreoMacaron()
+        {
+            return View();
+        }
     }
 }
