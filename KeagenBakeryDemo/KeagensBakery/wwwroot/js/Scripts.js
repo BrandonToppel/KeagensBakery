@@ -14,4 +14,18 @@ function showSlides() {
     setTimeout(showSlides, 4000); // Change image every 2 seconds
 }
 
+//function for dropdown product list
+function OptionSelection() {
+    var obj = document.getElementsById("BrownieCookies");
+    var SingleImg = document.getElementById("SingleCookie");
+    var PackageImg = document.getElementById("PackageCookie");
+    if (obj.options[obj.selectedIndex].Text == "Single Cookie $1.29") {
+        SingleImg.style.visibility = 'visable';
+    }
+    if (obj.options[obj.selectedIndex].Text == "6 Cookies $5.99") {
+        SingleImg.style.visibility = 'none';
+        PackageImg.style.visibility = 'visable';
+    }
+}
+
 
