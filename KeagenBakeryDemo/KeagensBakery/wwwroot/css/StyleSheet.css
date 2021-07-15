@@ -183,13 +183,14 @@ footer {
 }
 /*styles for the add to cart button on the product pages*/
 .ProductsPageImg .Add_Cart_Btn {
-    margin-right: 200px;
-    margin-bottom: 75px;
+    margin: auto;
     width: 250px;
     height: 75px;
 }
 .ProductsPageImg {
-    margin-left: 800px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 #SingleCookie {
     display:none;
@@ -200,6 +201,10 @@ footer {
     max-width: 300px;
 }
 #PackageOptions {
+    position: absolute;
+    right: 0px;
+    width: 300px;
+    padding: 10px;
 }
 .Add_Cart_Btn {
     
