@@ -181,6 +181,10 @@ footer {
     margin-bottom: 10px;
     
 }
+.CookieOptions {
+    border: dotted;
+    border-radius:3px;
+}
 /*styles for the add to cart button on the product pages*/
 .ProductsPageImg .Add_Cart_Btn {
     margin: auto;
