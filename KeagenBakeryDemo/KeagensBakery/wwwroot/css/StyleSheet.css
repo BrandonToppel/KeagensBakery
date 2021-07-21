@@ -24,7 +24,7 @@ h2, #HomepageHeading {
     width: 35%;
 }
 /*Navigation bar styles*/
-.Navbar, ul {
+ul.Navbar {
     list-style-type: none;
     margin: 0;
     padding: 10px;
@@ -174,12 +174,17 @@ footer {
     max-height: 200px;
 }
 
+ul.CookiesDescriptions {
+    background-color: white;
+}
+
 /*Product pages styles*/
 .ProductsPageImg img {
     max-height: 500px;
     max-width: 500px;
-    margin-bottom: 10px;
-    
+   /* display: block;
+    margin-left: auto;
+    margin-right: auto;*/
 }
 .CookieOptions {
     border: dotted;
@@ -190,11 +195,6 @@ footer {
     margin: auto;
     width: 250px;
     height: 75px;
-}
-.ProductsPageImg {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 #SingleCookie {
     display:none;
@@ -210,8 +210,13 @@ footer {
     width: 300px;
     padding: 10px;
 }
-.Add_Cart_Btn {
-    
+.PurchaseOptions {
+    border-style: dashed;
+    border-color: black;
+
+}
+.PurchaseOptions .Add_Cart_Btn {
+    margin-left: 100px;
 }
 
 
