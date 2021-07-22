@@ -6,10 +6,23 @@
 <h1>OreoMacaron</h1>
 <div class="ProductsPageImg">
     <img class="OreoMacaronPic" src="~/images/Oreo-Macarons.jpg" />
+    <div class="ProductDescription">
+        <h4>Descrption</h4>
+        <p>Super flavorful Oreo Macaroons.</p>
+    </div>
+    <div class="PurchaseOptions">
+        <ul class="PurchasingArea">
+            <li><label id="PdctSizes" for="OreoMacaroons">Product Sizes</label></li>
+            <li>
+                <select id="PackageOptions" name="OreoMacaroons">
+                    <option value="1Pack">Single Cookie $1.29</option>
+                    <option value="6Pack">6 Cookies $6.99</option>
+                    <option value="12Pack">12 Cookies $14.99</option>
+                    <option value="24Pack">24 Cookies $28.99</option>
+                    <option value="48Pack">48 Cookies $59.99</option>
+                </select>
+            </li>
+            <li><button class="Add_Cart_Btn">Add to Cart</button></li>
+        </ul>
+    </div>
 </div>
-<label for="OreoMacarons">Please pick the Size</label>
-<select id="OreoMacarons" name="Macarons">
-    <option value="4Pack">4 Pack $6.99</option>
-    <option value="6Pack">6 Pack $8.99</option>
-</select>
-
