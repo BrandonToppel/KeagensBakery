@@ -38,6 +38,16 @@ namespace WebAPI
             //user table context
             services.AddDbContext<UserContext>(opt =>
             opt.UseSqlServer(Configuration.GetConnectionString("UserContext")));
+
+            //products database context
+            services.AddDbContext<ProductContext>(opt =>
+           opt.UseSqlServer(Configuration.GetConnectionString("ProductContext")));
+
+            //Order Details
+            services.AddDbContext<OrderDetailsContext>(opt =>
+          opt.UseSqlServer(Configuration.GetConnectionString("OrderDetailsContext")));
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
