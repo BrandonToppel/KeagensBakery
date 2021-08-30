@@ -47,6 +47,9 @@ namespace WebAPI
             services.AddDbContext<OrderDetailsContext>(opt =>
           opt.UseSqlServer(Configuration.GetConnectionString("OrderDetailsContext")));
 
+            //Customers context
+            services.AddDbContext<CustomersContext>(opt =>
+            opt.UseSqlServer(Configuration.GetConnectionString("CustomersContext")));
 
         }
 
