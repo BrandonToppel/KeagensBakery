@@ -16,6 +16,7 @@ namespace KeagensBakery.Controllers
     {
         HelperAPI helperApi = new HelperAPI();
         string BaseURL = "https://localhost:44389/";
+
         public async Task<IActionResult> GetUsers()
         {
 
@@ -29,6 +30,22 @@ namespace KeagensBakery.Controllers
             }
             return View(user);
             
+        }
+
+        //Method to Post users 
+        public IActionResult CreateUser(Users user)
+        {
+            HttpClient client = helperApi.client();
+            var postTask = client.PostAsJsonAsync<Users>("api/users", user);
+            postTask.Wait();
+
+            var result = postTask.Result;
+            if (result.IsSuccessStatusCode)
+            {
+                return RedirectToAction("Index");
+            }
+
+            return View();
         }
     }
 }
