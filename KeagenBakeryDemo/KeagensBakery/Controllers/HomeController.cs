@@ -28,9 +28,6 @@ namespace KeagensBakery.Controllers
             return View();
         }
         
-        public IActionResult CreateUser()
-        {
-            return View("\\Views\\User\\CreateUser.cshtml");
-        }
+
     }
 }
