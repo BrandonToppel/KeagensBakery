@@ -1,4 +1,6 @@
 ﻿var slideIndex = 0;
+const uri = 'https://localhost:44354/api/Account';
+
 showSlides();
 //slide show for homepage
 function showSlides() {
@@ -11,6 +13,32 @@ function showSlides() {
     if (slideIndex > slides.length) { slideIndex = 1 }
     slides[slideIndex - 1].style.display = "block";
     setTimeout(showSlides, 4000); // Change image every 4 seconds
+}
+
+function AddUsers() {
+    const addNameTextBox = document.getElementById('add-name').value;
+
+    const item = {
+        isComplete: false,
+        name: addNameTextBox.value.trim()
+    };
+
+    fetch(uri, {
+        method: 'POST',
+        mode: 'cors',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+
+        },
+        body: JSON.stringify(item)
+    })
+        .then(response => response.json())
+        .then(() => {
+            getItems();
+            addNameTextBox.value = '';
+        })
+        .catch(error => console.error('Unable to add item.', error));
 }
 
 //function for dropdown product list

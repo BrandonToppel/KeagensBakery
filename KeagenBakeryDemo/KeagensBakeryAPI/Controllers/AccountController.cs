@@ -34,7 +34,7 @@ namespace KeagensBakeryAPI.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = apps.Email, Email = apps.Email };
+                var user = new ApplicationUser { UserName = apps.Email, Email = apps.Email, FirstName = apps.FirstName, LastName = apps.LastName};
                 IdentityResult result = await _userManager.CreateAsync(user, apps.Password);
                 if (result.Succeeded)
                 {

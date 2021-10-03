@@ -8,17 +8,16 @@ using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
-using KeagensBakeryAPI.Data;
+using KeagensBakeryWebAPI.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using KeagensBakeryAPI.Models;
+using KeagensBakeryWebAPI.Models;
 
-namespace KeagensBakeryAPI
+namespace KeagensBakeryWebAPI
 {
     public class Startup
     {
-        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -29,35 +28,21 @@ namespace KeagensBakeryAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCors(options =>
-            {
-                options.AddPolicy(name: MyAllowSpecificOrigins,
-                    builder =>
-                    {
-                        builder.WithOrigins("https://localhost:44335")
-                        .AllowAnyMethod()
-                        .AllowAnyHeader();
-                        
-                    });
-            });
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            //services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            //services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
             //    .AddEntityFrameworkStores<ApplicationDbContext>();
-            services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
+            services.AddIdentity<AppUsers, AppRoles>(options =>
             {
                 options.User.RequireUniqueEmail = false;
             })
-                .AddEntityFrameworkStores<ApplicationDbContext>()
-                .AddDefaultUI()
-                .AddDefaultTokenProviders();
+    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddDefaultUI()
+    .AddDefaultTokenProviders();
             services.AddControllersWithViews();
             services.AddRazorPages();
 
-            //Product Database context
-            services.AddDbContext<ProductDbContext>(opt =>
-            opt.UseSqlServer(Configuration.GetConnectionString("ProductContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -75,12 +60,9 @@ namespace KeagensBakeryAPI
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
-            app.UseDefaultFiles();
             app.UseStaticFiles();
 
             app.UseRouting();
-
-            app.UseCors(MyAllowSpecificOrigins);
 
             app.UseAuthentication();
             app.UseAuthorization();
@@ -89,9 +71,7 @@ namespace KeagensBakeryAPI
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}")
-                .RequireCors(MyAllowSpecificOrigins);
-                
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
         }
