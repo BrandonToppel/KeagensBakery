@@ -9,14 +9,14 @@ namespace KeagensBakeryWebAPI.Models
 {
     public class AppUsers : IdentityUser<int>
     {
-        [Required]
-        [DataType(DataType.Text)]
-        [Display(Name = "First Name")]
+        //[Required]
+        //[DataType(DataType.Text)]
+        //[Display(Name = "First Name")]
         public string First_Name { get; set; }
 
-        [Required]
-        [DataType(DataType.Text)]
-        [Display(Name = "Last Name")]
+        //[Required]
+        //[DataType(DataType.Text)]
+        //[Display(Name = "Last Name")]
         public string Last_Name { get; set; }
 
         public DateTime DOB { get; set; }
