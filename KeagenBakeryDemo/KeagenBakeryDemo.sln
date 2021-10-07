@@ -3,11 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30309.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csproj", "{416EAAB3-56E2-4D34-A569-99166241B28E}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KeagensBakery", "KeagensBakery\KeagensBakery.csproj", "{03075FC6-CA50-4815-BC17-82D11566B0B4}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KeagensBakeryAPI", "KeagensBakeryAPI\KeagensBakeryAPI.csproj", "{16BAAAA4-5F38-4C00-880B-ED97362808CF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KeagensBakeryWebAPI", "KeagensBakeryWebAPI\KeagensBakeryWebAPI.csproj", "{8C3AF6AB-6AD4-4182-A64D-5D9805125983}"
 EndProject
@@ -17,18 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{416EAAB3-56E2-4D34-A569-99166241B28E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{416EAAB3-56E2-4D34-A569-99166241B28E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{416EAAB3-56E2-4D34-A569-99166241B28E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{416EAAB3-56E2-4D34-A569-99166241B28E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{03075FC6-CA50-4815-BC17-82D11566B0B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{03075FC6-CA50-4815-BC17-82D11566B0B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03075FC6-CA50-4815-BC17-82D11566B0B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03075FC6-CA50-4815-BC17-82D11566B0B4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{16BAAAA4-5F38-4C00-880B-ED97362808CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{16BAAAA4-5F38-4C00-880B-ED97362808CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{16BAAAA4-5F38-4C00-880B-ED97362808CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{16BAAAA4-5F38-4C00-880B-ED97362808CF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8C3AF6AB-6AD4-4182-A64D-5D9805125983}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8C3AF6AB-6AD4-4182-A64D-5D9805125983}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C3AF6AB-6AD4-4182-A64D-5D9805125983}.Release|Any CPU.ActiveCfg = Release|Any CPU
