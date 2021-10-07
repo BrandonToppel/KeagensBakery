@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KeagensBakery", "KeagensBak
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KeagensBakeryAPI", "KeagensBakeryAPI\KeagensBakeryAPI.csproj", "{16BAAAA4-5F38-4C00-880B-ED97362808CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeagensBakeryWebAPI", "KeagensBakeryWebAPI\KeagensBakeryWebAPI.csproj", "{8C3AF6AB-6AD4-4182-A64D-5D9805125983}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KeagensBakeryWebAPI", "KeagensBakeryWebAPI\KeagensBakeryWebAPI.csproj", "{8C3AF6AB-6AD4-4182-A64D-5D9805125983}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

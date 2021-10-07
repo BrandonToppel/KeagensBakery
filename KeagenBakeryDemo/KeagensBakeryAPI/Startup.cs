@@ -35,8 +35,9 @@ namespace KeagensBakeryAPI
                     builder =>
                     {
                         builder.WithOrigins("https://localhost:44335")
-                        .AllowAnyMethod()
-                        .AllowAnyHeader();
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                        
                         
                     });
             });
