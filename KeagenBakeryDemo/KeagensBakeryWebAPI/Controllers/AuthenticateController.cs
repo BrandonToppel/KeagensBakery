@@ -13,6 +13,7 @@ namespace KeagensBakeryWebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Produces("application/json")]
     public class AuthenticateController : ControllerBase
     {
         private readonly UserManager<AppUsers> _userManager;
@@ -55,10 +56,14 @@ namespace KeagensBakeryWebAPI.Controllers
                 }
                 else
                 {
-                    return StatusCode(StatusCodes.Status201Created);
+                    StatusCode(StatusCodes.Status201Created);
+                    Response.Redirect("https://localhost:44335/Home");
+                    return Ok(user);
                 }
             }
+            //Return back to the homescreen
             return Ok();
+            //return Ok("Done");
         }
 
         //Login user this is also where we will JWT
@@ -66,6 +71,7 @@ namespace KeagensBakeryWebAPI.Controllers
         [Route("Login")]
         public async Task<IActionResult> Login(InputModel appUsers)
         {
+            int status;
             if (ModelState.IsValid)
             {
                 var result = await _signInManager.PasswordSignInAsync(appUsers.Email, appUsers.Password, appUsers.RememberMe, lockoutOnFailure: false);
@@ -78,7 +84,8 @@ namespace KeagensBakeryWebAPI.Controllers
                     return StatusCode(StatusCodes.Status202Accepted);
                 }
             }
-            return Ok();
+            return Ok("Done");
         }
+        
     }
 }

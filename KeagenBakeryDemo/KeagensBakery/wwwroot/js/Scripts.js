@@ -1,5 +1,4 @@
 ﻿var slideIndex = 0;
-//const uri = 'https://localhost:44354/api/Account';
 const uri = 'https://localhost:44361/api/Authenticate';
 
 showSlides();
@@ -24,12 +23,11 @@ function AddUsers() {
     const addPasswordTextBox = document.getElementById('userPassword').value;
 
     let item = {
-        isComplete: false,
-        FristName: addFNameTextBox.trim(),
-        LastName: addLNameTextBox.trim(),
+        //isComplete: false,
+        Frist_Name: addFNameTextBox.trim(),
+        Last_Name: addLNameTextBox.trim(),
         Email: addEmailTextBox.trim(),
         Password: addPasswordTextBox.trim()
-
     };
 
     fetch(uri, {
@@ -40,20 +38,26 @@ function AddUsers() {
             'Content-Type': 'application/json'
 
         },
-        body: JSON.stringify(item)
+        body: JSON.stringify(item),
     })
         .then(response => response.json())
         .then(() => {
-            getItems();
+
             addFNameTextBox.value = '';
             addLNameTextBox.value = '';
             addEmailTextBox.value = '';
             addPasswordTextBox.value = '';
+            Redirect();
 
         })
+  
         .catch(error => console.error('Unable to add item.', error));
 }
 
+function Redirect() {
+    //Redirect to homepage after registeration is complete
+    window.location.href = 'https://localhost:44335/';
+}
 //function for dropdown product list
 function OptionSelection() {
     console.log(25);
