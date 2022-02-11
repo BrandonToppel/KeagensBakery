@@ -1,4 +1,7 @@
 ﻿var slideIndex = 0;
+//const uri = 'https://localhost:44354/api/Account';
+const uri = 'https://localhost:44361/api/Authenticate';
+
 showSlides();
 //slide show for homepage
 function showSlides() {
@@ -11,6 +14,44 @@ function showSlides() {
     if (slideIndex > slides.length) { slideIndex = 1 }
     slides[slideIndex - 1].style.display = "block";
     setTimeout(showSlides, 4000); // Change image every 4 seconds
+}
+
+//This is the signup function for registering users
+function AddUsers() {
+    const addFNameTextBox = document.getElementById('first-name').value;
+    const addLNameTextBox = document.getElementById('last-name').value;
+    const addEmailTextBox = document.getElementById('email').value;
+    const addPasswordTextBox = document.getElementById('userPassword').value;
+
+    let item = {
+        isComplete: false,
+        FristName: addFNameTextBox.trim(),
+        LastName: addLNameTextBox.trim(),
+        Email: addEmailTextBox.trim(),
+        Password: addPasswordTextBox.trim()
+
+    };
+
+    fetch(uri, {
+        method: 'POST',
+        mode: 'cors',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+
+        },
+        body: JSON.stringify(item)
+    })
+        .then(response => response.json())
+        .then(() => {
+            getItems();
+            addFNameTextBox.value = '';
+            addLNameTextBox.value = '';
+            addEmailTextBox.value = '';
+            addPasswordTextBox.value = '';
+
+        })
+        .catch(error => console.error('Unable to add item.', error));
 }
 
 //function for dropdown product list

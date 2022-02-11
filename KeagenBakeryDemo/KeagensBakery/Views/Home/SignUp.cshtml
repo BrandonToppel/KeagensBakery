@@ -4,11 +4,11 @@
 }
 
 <h1>Sign Up</h1>
-<form>
+<form action="javascript:void(0);" method="POST" onsubmit="AddUsers()">
     <label for="FirstName">First Name:</label><br />
-    <input type="text" id="FirstName" name="FirstName" /><br />
+    <input type="text" id="first-name" name="FirstName" /><br />
     <label for="LastName">Last Name:</label><br />
-    <input type ="text" id="LastName" name="LastName" /><br />
+    <input type ="text" id="last-name" name="LastName" /><br />
     <label for="Birthday" id="BirthDate">Birth Date:</label><br />
     <input type="date" id="BirthDate" name="BirthDate"/> <br />
     <label for="email">Email:</label><br />
@@ -23,6 +23,6 @@
     </select>
     <label for="ZipCode">Zip Code</label><br />
     <input type="number" id="ZipCode" name="ZipCode" /><br />
-    <input type="submit" value="Submit" asp-controller="User" asp-action="SignUp" />
+    <input type="submit" value="Add"/>
 </form>
 
