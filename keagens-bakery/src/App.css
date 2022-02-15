@@ -60,3 +60,35 @@
     left: 40%;
   }
 }
+
+/*Media Queries styled for mobile screens*/
+@media only screen and (max-width: 500px) {
+  #logo {
+    position: relative;
+    color: #33cccc;
+    left: 25%;
+  }
+  .Navbar {
+    background-color: #ffccff;
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .NavMenu li {
+    background-color: #ffccff;
+    padding: 14px 16px;
+    display: block;
+
+  }
+
+  #NavItem {
+    color:#33cccc;
+    font-weight: bold;
+    position: relative;
+    left: 35%;
+    display: none;
+
+  }
+
+} 
