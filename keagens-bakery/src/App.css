@@ -38,9 +38,12 @@
 }
 /* Media queries styled for when the screen is on a laptop or desktop */
 @media only screen and (min-width: 760px) {
+  .fa-Bars {
+    display: none;
+  }
   #logo {
     position: relative;
-    left: 40%;
+    left: 41%;
   }
 
   .NavMenu {
@@ -55,18 +58,24 @@
     color: #33cccc;
     font-weight: bold;font-size: large;
   }
-  #NavItem {
+#NavItem {
     position:relative;
-    left: 40%;
+    left: 35%;
   }
 }
 
 /*Media Queries styled for mobile screens*/
 @media only screen and (max-width: 500px) {
+  .Navbar .fa-Bars {
+    position: relative;
+    left: 5%;
+    top: -50px;
+    color: #33cccc;
+  }
   #logo {
     position: relative;
     color: #33cccc;
-    left: 25%;
+    left: 20%;
   }
   .Navbar {
     background-color: #ffccff;
@@ -86,9 +95,9 @@
     color:#33cccc;
     font-weight: bold;
     position: relative;
-    left: 35%;
+    left: 29%;
     display: none;
-
+    
   }
 
 } 
