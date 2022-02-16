@@ -7,7 +7,8 @@ const Navbar = () => {
   return (
     <div className='Navbar'>
         <h1 id='logo'>Keagen's Bakery</h1>
-        <button onClick={NavControl} className="fa-Bars"><FontAwesomeIcon icon = {faBars}  color="black" size='xl'></FontAwesomeIcon></button>
+        <button onClick={NavControl} className="fa-Bars"><FontAwesomeIcon icon = {faBars} className= "fa-bars-icon" color="black" size='2xl'></FontAwesomeIcon></button>
+        <button onClick={NavControl} className="fa-Times"><FontAwesomeIcon icon = {faTimes} className = "fa-Times-Icon" color='black' size='2xl'></FontAwesomeIcon></button>
         <div className='NavMenu'>
         <ul id='NavItem'>
             <li>Home</li>
@@ -23,12 +24,31 @@ const Navbar = () => {
 //function that will display the mobile navigation menu
 function NavControl() {
   var x = document.getElementById("NavItem");
+  //Represents a list of items from the fa-Bars class
+  var barsIcon = document.getElementsByClassName("fa-Bars");
+  var timesIcon = document.getElementsByClassName("fa-Times");
 
   if(x.style.display === "none") {
     x.style.display = "block";
+    //loop to hide the menu bars icon
+    for(var i = 0; i < barsIcon.length; i++) {
+      barsIcon[i].style.visibility = 'hidden';
+    }
+    //loop to display the times icon
+    for(var i = 0; i < timesIcon.length; i++) {
+      timesIcon[i].style.visibility = 'visible';
+    }
   }
   else {
     x.style.display = "none";
+    //loop to hide times icon
+    for(var i = 0; i < timesIcon.length; i++) {
+      timesIcon[i].style.visibility = 'hidden';
+    }
+    //loop to display the menu bar icon
+    for(var i = 0; i < barsIcon.length; i++) {
+      barsIcon[i].style.visibility = 'visible';
+    }
   }
 }
 

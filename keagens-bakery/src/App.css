@@ -41,6 +41,9 @@
   .fa-Bars {
     display: none;
   }
+  .fa-Times {
+    display: none;
+  }
   #logo {
     position: relative;
     left: 41%;
@@ -66,36 +69,68 @@
 
 /*Media Queries styled for mobile screens*/
 @media only screen and (max-width: 500px) {
-  .Navbar .fa-Bars {
-    position: relative;
-    left: 5%;
-    top: -50px;
+  /* Style to change the color of the menu bars icon */
+  .fa-bars-icon {
     color: #33cccc;
   }
+  .fa-Bars {
+    border: hidden;
+    background-color: #ffccff;
+  }
+  .fa-Times {
+    border: hidden;
+    background-color: #ffccff;
+  }
+  .fa-Times-Icon {
+    color:#33cccc;
+  }
+  /*Changes the color and moves the logo to the middle of the mobile screen*/
   #logo {
     position: relative;
     color: #33cccc;
     left: 20%;
   }
+  /*These styles below are the reason the background is the color that it is*/
+  /*Also is the reason why the navbar covers the entire width of the screen.*/
+  /*Note: removing the overflow value will cause the width to go beyond its normal width of the screen*/
   .Navbar {
     background-color: #ffccff;
-    position: absolute;
+    position: relative;
     width: 100%;
     overflow: hidden;
   }
-
-  .NavMenu li {
+  /*Places the button that contains the Times icon*/
+  .Navbar .fa-Times {
+    position: absolute;
+    left: 5%;
+    /*Moving the icon via top method causes problems with its placement*/
+    /*Setting it to 0 and using the Margin-top fixes this placement issue*/
+    top: 0;
+    margin-top: 8%;
+    color: #33cccc;
+    visibility: hidden;
+  }
+  .Navbar .fa-Bars {
+    position: absolute;
+    left: 5%;
+    top: 0;
+    margin-top: 8%;
+    color: #33cccc;
+    visibility: visible;
+  }
+ 
+  .NavMenu li{
     background-color: #ffccff;
     padding: 14px 16px;
     display: block;
-
-  }
-
-  #NavItem {
-    color:#33cccc;
-    font-weight: bold;
     position: relative;
     left: 29%;
+    top: 50%;
+  }
+
+  #NavItem  {
+    color:#33cccc;
+    font-weight: bold;
     display: none;
     
   }
