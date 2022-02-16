@@ -2,6 +2,7 @@ import React from 'react'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBars} from "@fortawesome/free-solid-svg-icons";
 import {faTimes} from "@fortawesome/free-solid-svg-icons";
+import {NavLink} from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -11,9 +12,9 @@ const Navbar = () => {
         <button onClick={NavControl} className="fa-Times"><FontAwesomeIcon icon = {faTimes} className = "fa-Times-Icon" color='black' size='2xl'></FontAwesomeIcon></button>
         <div className='NavMenu'>
         <ul id='NavItem'>
-            <li>Home</li>
-            <li>Bakery</li>
-            <li>About</li>
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="/Bakery">Bakery</NavLink></li>
+            <li><NavLink to="/About">About</NavLink></li>
             <li>Contact</li>
         </ul>
         </div>
