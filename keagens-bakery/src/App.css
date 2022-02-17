@@ -38,15 +38,28 @@
 }
 /* Media queries styled for when the screen is on a laptop or desktop */
 @media only screen and (min-width: 760px) {
+  /*Styles to underline the navigation items when their active*/
+  .active li {
+    text-decoration: underline;
+  }
+  .inactive {
+    text-decoration: none;
+  }
   .fa-Bars {
     display: none;
   }
   .fa-Times {
     display: none;
   }
+  .fa-User {
+    background-color: white;
+    border: none;
+    padding: 0;
+  }
   #logo {
     position: relative;
     left: 41%;
+    color: #33cccc;
   }
 
   .NavMenu {
@@ -69,6 +82,15 @@
 
 /*Media Queries styled for mobile screens*/
 @media only screen and (max-width: 500px) {
+  /*These styles are for the NavLink tags*/
+  .active {
+    text-decoration: underline;
+    color: #33cccc;
+  }
+  .inactive {
+    text-decoration: none;
+    color:#33cccc
+  }
   /* Style to change the color of the menu bars icon */
   .fa-bars-icon {
     color: #33cccc;
@@ -134,5 +156,4 @@
     display: none;
     
   }
-
 } 

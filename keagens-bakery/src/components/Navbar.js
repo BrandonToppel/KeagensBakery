@@ -2,7 +2,9 @@ import React from 'react'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBars} from "@fortawesome/free-solid-svg-icons";
 import {faTimes} from "@fortawesome/free-solid-svg-icons";
+import {faUser} from "@fortawesome/free-solid-svg-icons";
 import {NavLink} from "react-router-dom";
+
 
 const Navbar = () => {
   return (
@@ -12,10 +14,11 @@ const Navbar = () => {
         <button onClick={NavControl} className="fa-Times"><FontAwesomeIcon icon = {faTimes} className = "fa-Times-Icon" color='black' size='2xl'></FontAwesomeIcon></button>
         <div className='NavMenu'>
         <ul id='NavItem'>
-            <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/Bakery">Bakery</NavLink></li>
-            <li><NavLink to="/About">About</NavLink></li>
-            <li>Contact</li>
+            <NavLink to="/"  className={({ isActive }) => (isActive ? 'active' : 'inactive')}><li>Home</li></NavLink>
+            <NavLink to="/Bakery" className={({ isActive }) => (isActive ? 'active' : 'inactive')}><li>Bakery</li></NavLink>
+            <NavLink to="/About" className={({ isActive }) => (isActive ? 'active' : 'inactive')}><li>About</li></NavLink>
+            <li><NavLink to ="/" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Contact</NavLink></li>
+            <li><input type="text" placeholder='search' id='search-Bar'></input></li>
         </ul>
         </div>
     </div>
