@@ -48,6 +48,14 @@
   .fa-Bars {
     display: none;
   }
+  .fa-Magnifying-Glass {
+    background-color: #ffccff;
+    border: none;
+    margin-top: 0.9%;
+  }
+  .fa-Magnifying-Glass-Icon {
+    color: #33cccc;
+  }
   .fa-Times {
     display: none;
   }
@@ -91,6 +99,7 @@
     text-decoration: none;
     color:#33cccc
   }
+
   /* Style to change the color of the menu bars icon */
   .fa-bars-icon {
     color: #33cccc;
@@ -98,6 +107,16 @@
   .fa-Bars {
     border: hidden;
     background-color: #ffccff;
+  }
+  .fa-Magnifying-Glass {
+    background-color: #ffccff;
+    border: none;
+    position: absolute;
+    margin-left: 45%;
+    bottom: 130%;
+  }
+  .fa-Magnifying-Glass-Icon {
+    color: #33cccc;
   }
   .fa-Times {
     border: hidden;
@@ -155,5 +174,9 @@
     font-weight: bold;
     display: none;
     
+  }
+  #search-Bar {
+    position: relative;
+    right: 15%;
   }
 } 
