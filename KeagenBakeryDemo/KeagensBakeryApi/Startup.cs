@@ -35,6 +35,14 @@ namespace KeagensBakeryApi
             _jwtKey = Configuration["Jwt:Key"];
             _jwtIssuer = Configuration["Jwt:Issuer"];
 
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder =>
+                {
+                    builder.WithOrigins("http://localhost:3000").AllowAnyHeader();
+                });
+            });
+
             services.AddDbContext<ApplicationDbContext>(options =>
                options.UseSqlServer(
                    Configuration.GetConnectionString("DefaultConnection")));
@@ -96,6 +104,7 @@ namespace KeagensBakeryApi
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseCors();
 
             app.UseAuthorization();
 

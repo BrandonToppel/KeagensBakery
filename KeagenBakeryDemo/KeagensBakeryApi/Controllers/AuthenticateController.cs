@@ -141,7 +141,7 @@ namespace KeagensBakeryApi.Controllers
             }
             else
             {
-                await _userManager.AddToRoleAsync(user, "Admin");
+                await _userManager.AddToRoleAsync(user, "User");
                 return StatusCode(StatusCodes.Status201Created);
             }
         }
